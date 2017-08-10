@@ -15,7 +15,7 @@ var del             = require('del');
 var paths = {
     views: 'app/**/*.html',
     styles: 'app/sass/**/*.scss',
-    vendorStyles: 'app/css/*.css',
+    vendorStyles: 'app/assets/**/*.css',
     scripts: [
         {
             dist: 'index.min.js',
@@ -37,7 +37,7 @@ var paths = {
             ]
         }
     ],
-    vendorScripts: 'app/js/vendors/**/*.js',
+    vendorScripts: 'app/assets/**/*.js',
     watchScripts: 'app/js/**/*.js',
     images: 'app/img/**/*',
     pictures: 'app/pic/**/*',
