@@ -401,6 +401,49 @@ a.px-demo-brand:hover {
 .navbar-nav .open .dropdown-menu {
   background-color: #ffffff;
 }
+/*=========================================*/
+.p-20 {
+  padding: 0 20px;
+}
+.p-18 {
+  padding: 0 18px;
+}
+.panels__item {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  height: 220px;
+}
+.panels__item h5 {
+  padding-top: 11px;
+  padding-bottom: 13px;
+  margin: 0;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #e5e5e5;
+}
+.panels__content {
+  padding-top: 15px;
+}
+.panels__content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.panels__content li {
+  line-height: 24px;
+  position: relative;
+}
+.panels__content li.check:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 12px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translate(0, calc(-50% + 1px));
+  background-image: url(../image/check.png);
+  background-repeat: no-repeat;
+}
 @media (min-width: 768px) {
   .user {
     width: 143px;
