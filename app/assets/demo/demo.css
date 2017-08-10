@@ -401,6 +401,9 @@ a.px-demo-brand:hover {
 .navbar-nav .open .dropdown-menu {
   background-color: #ffffff;
 }
+.navbar-brand.px-demo-brand {
+  word-spacing: -2px;
+}
 /*=========================================*/
 .p-20 {
   padding: 0 20px;
@@ -419,6 +422,7 @@ a.px-demo-brand:hover {
   margin: 0;
   background-color: #f1f1f1;
   border-bottom: 1px solid #e5e5e5;
+  position: relative;
 }
 .panels__content {
   padding-top: 15px;
@@ -431,18 +435,84 @@ a.px-demo-brand:hover {
 .panels__content li {
   line-height: 24px;
   position: relative;
+  padding-right: 30px;
+  overflow: hidden;
 }
 .panels__content li.check:after {
   content: "";
   display: block;
-  width: 15px;
-  height: 12px;
+  width: 30px;
+  height: 24px;
   position: absolute;
-  right: 8px;
+  right: 0;
   top: 50%;
   transform: translate(0, calc(-50% + 1px));
   background-image: url(../image/check.png);
+  background-position: 49% 50%;
   background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+.panels__content i {
+  letter-spacing: 4.1px;
+  padding-left: 9px;
+  padding-right: 4px;
+}
+.info,
+.danger{
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 20px;
+  background: #7ebee3;
+  line-height: 20px;
+  height: 21px;
+  font-size: 12px;
+  margin-left: 2px;
+}
+.danger {
+  background: #ff6e56;
+  padding: 0 12px 0 11px;
+}
+.info {
+  padding: 0 15px 0 14px;
+}
+.wrap {
+  position: absolute;
+  padding-right: 8px;
+  right: 0;
+  top: 3px;
+  display: inline-flex;
+  justify-content: end;
+  flex-flow: row;
+  padding-left: 5px;
+  background-color: #ffffff;
+}
+.btn_remove {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-14px, -50%);
+  background-image: url(../image/delete.png);
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0) !important;
+  border: none;
+  height: 12px;
+  width: 12px;
+  padding: 0;
+}
+.btn_remove:hover {
+  background-color: rgba(0,0,0,0) !important;
+}
+.panels__content p {
+  line-height: 20px;
+  margin-top: 2px;
+  margin-bottom: 14px;
+}
+.panels__content a {
+  display: block;
+  text-decoration: underline;
+  color: #007dc5;
+  line-height: 24px;
 }
 @media (min-width: 768px) {
   .user {
