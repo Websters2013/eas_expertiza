@@ -633,6 +633,9 @@ a.px-demo-brand:hover {
   height: 500px;
   font-size: 11px;
 }
+#chartdiv .amcharts-chart-div > a {
+  display: none !important;
+}
 
 @media (max-width: 1200px) {
   .justify-align {
