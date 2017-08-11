@@ -156,6 +156,28 @@
     }
   </style>
   <!-- / Custom styling -->
+
+  <style>
+    .indicators {
+
+    }
+    .indicators .btn {
+      background: rgb(255, 255, 255);
+      border: 1px solid rgb(224, 224, 224);
+      border-radius: 2px;
+    }
+    .data-checking__list {
+
+    }
+    .data-checking__item {
+      background-image: url(./image/dot.jpg);
+      background-position: bottom left;
+      background-repeat: repeat-x;
+    }
+    .data-checking i {
+      color: #1fc96f;
+    }
+  </style>
 </head>
 <body>
   <nav class="px-nav px-nav-left">
@@ -270,34 +292,207 @@
   </nav>
 
   <div class="px-content">
-    <div class="row panels">
-      <div class="col-sm-12 col-md-6">
-            <div class="panels__item">
-              <h5 class="p-20">Проверка исходных данных</h5>
-              <div class="panels__content p-20">
-                <ul>
-                  <li class="check">Месторождение<i>...............................................................................................................</i></li>
-                  <li>Макроэкономика<i>.........................................................................................................................</i><span class="wrap"><span class="info">2 рекомендации</span><span class="danger">1 ошибка</span></span></li>
-                  <li>Цены<i>..............................................................................................................................................</i><span class="wrap"><span class="info">1 рекомендация</span></span></li>
-                  <li class="check">Налоги<i>.......................................................................................................................</i></li>
-                  <li class="check">Затраты<i>......................................................................................................................</i></li>
-                  <li class="check">Инфраструктура<i>...............................................................................................................</i></li>
-                </ul>
-              </div>
-            </div>
+
+    <hr class="page-wide-block m-y-0">
+
+    <h3 class="m-y-4 font-weight-semibold">
+      <i class="fa fa-area-chart m-r-11"></i>
+      <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          Профиль добычи
+        </button>
+        <div class="dropdown-menu">
+          <li><a href="#">Профиль добычи 1</a></li>
+          <li><a href="#">Профиль добычи 2</a></li>
+          <li><a href="#">Профиль добычи 3</a></li>
+        </div>
       </div>
-      <div class="col-sm-12 col-md-6">
-        <div class="panels__item">
-          <h5 class="p-18">ИАС Экспертиза <a href="#" class="btn btn_remove"></a></h5>
-          <div class="panels__content p-18">
-          <p>Абзац текста с общей информации о системе и основными возможностями. В дальнейшем на этом месте можно вставлять рекоментации, подсказки или события системы</p>
-            <a href="#">Навигационная ссылка 1</a>
-            <a href="#">Навигационная ссылка 2</a>
+    </h3>
+
+
+  </div>
+
+  <div class="px-content">
+
+    <div class="row">
+      <div class="col-md-6 data-checking">
+        <div class="panel">
+          <div class="panel-heading bg-white darker">
+            <span class="panel-title font-weight-bold">Проверка исходных данных</span>
+          </div>
+
+          <div class="panel-body">
+            <ul class="data-checking__list">
+              <li class="data-checking__item">
+                Месторождение
+                <i class="fa fa-check pull-xs-right"></i>
+              </li>
+              <li class="data-checking__item">
+                Макроэкономика
+                <span class="badge badge-info">2 рекомендации</span>
+                <span class="badge badge-danger">1 ошибка</span>
+              </li>
+              <li class="data-checking__item">
+                Цены
+                <i class="fa fa-check pull-xs-right"></i>
+              </li>
+              <li class="data-checking__item">
+                Налоги
+                <i class="fa fa-check pull-xs-right"></i>
+              </li>
+              <li class="data-checking__item">
+                Затраты
+                <i class="fa fa-check pull-xs-right"></i>
+              </li>
+              <li class="data-checking__item">
+                Инфраструктура
+                <i class="fa fa-check pull-xs-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel">
+          <div class="panel-heading bg-white darker">
+            <span class="panel-title font-weight-bold">ИАС Экспертиза</span>
+            <!--<i class="fa fa-close fx-right"></i>-->
+            <button type="button" class="close">×</button>
+          </div>
+          <div class="panel-body">
+            <p>Абзац текста с общей информации о системе и основными возможностями. В дальнейшем на этом месте можно
+              вставлять рекоментации, подсказки или события системы</p>
+            <p class="text-underlined">
+              <a href="#" class="display-block">Навигационная ссылка 1</a>
+              <a href="#" class="display-block">Навигационная ссылка 2</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="panel indicators">
+          <div class="panel-heading bg-white darker">
+            <div class="col-md-4">
+              <span class="panel-title font-weight-bold">Основные показатели</span>
+              <button type="button" class="btn btn-outline">Сбросить</button>
+            </div>
+            <div class="col-md-8">
+              <div class="col-md-5">
+                <span class="panel-title">Периметр</span>
+                <div class="dropdown">
+                  <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Месторождение
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Месторождение 1</a></li>
+                    <li><a href="#">Месторождение 2</a></li>
+                    <li><a href="#">Месторождение 3</a></li>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <span class="panel-title">Вариант разработки</span>
+                <div class="dropdown">
+                  <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Вариант 1 (реко...
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Вариант 1</a></li>
+                    <li><a href="#">Вариант 2</a></li>
+                    <li><a href="#">Вариант 3</a></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body p-t-0">
+
+            <ul class="nav nav-tabs nav-tabs-simple">
+              <li>
+                <div class="font-weight-bold m-t-6 p-r-20">Промысел:</div>
+              </li>
+              <li class=" active">
+                <a href="#tabs-1" data-toggle="tab">Нефтяной</a>
+              </li>
+              <li>
+                <a href="#tabs-2" data-toggle="tab">Газовый</a>
+              </li>
+            </ul>
+
+            <div class="tab-content row m-t-1">
+
+              <div class="tab-pane fade in active" id="tabs-1">
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+                  <div class="panel">
+                    <div class="panel-body well-sm">
+                      КИН
+                      <div class="pull-xs-right font-weight-semibold font-size-24 line-height-1">123</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+                  <div class="panel">
+                    <div class="panel-body well-sm">
+                      NPV, млн. руб.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+                  <div class="panel">
+                    <div class="panel-body well-sm">
+                      ДДГ, млн. руб.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+                  <div class="panel">
+                    <div class="panel-body well-sm">
+                      IRR, %
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+                  <div class="panel">
+                    <div class="panel-body well-sm">
+                      Объём рентабельных запасов, млн. т.
+                      <div class="pull-xs-right font-weight-semibold font-size-24 line-height-1">123</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade" id="tabs-2">
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+                  <div class="panel">
+                    <div class="panel-body">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
+
 
   <footer class="px-footer px-footer-bottom p-t-0"></footer>
 
