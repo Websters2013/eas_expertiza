@@ -63,6 +63,7 @@
   <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
   <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
   <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+  <script src="https://www.amcharts.com/lib/3/lang/ru.js"></script>
   <script src="assets/js/chart-setting.js"></script>
 
   <!-- Custom styling -->
@@ -431,84 +432,157 @@
             </div>
 
           </div>
-          <div class="panel-body p-t-0">
+          <div class="panel-body">
 
-            <ul class="nav nav-tabs nav-tabs-simple">
-              <li>
-                <div class="indicators__tab-title font-weight-bold">Промысел:</div>
-              </li>
-              <li class=" active">
-                <a href="#tabs-1" data-toggle="tab">Нефтяной</a>
-              </li>
-              <li>
-                <a href="#tabs-2" data-toggle="tab">Газовый</a>
-              </li>
-            </ul>
-
-            <div class="tab-content row m-t-1">
-
-              <div class="tab-pane fade in active" id="tabs-1">
-
-                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
-                  <div class="panel">
-                    <div class="indicators__tab-data">
-                      КИН
-                      <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">0,31</div>
-                    </div>
-                  </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="indicators__tab-data">
+                  КИН
+                  <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">0,31</div>
                 </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
-                  <div class="panel">
-                    <div class="indicators__tab-data">
-                      NPV, млн. руб.
-                      <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">50</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
-                  <div class="panel">
-                    <div class="indicators__tab-data">
-                      ДДГ, млн. руб.
-                      <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">120</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
-                  <div class="panel">
-                    <div class="indicators__tab-data">
-                      IRR, %
-                      <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">50</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
-                  <div class="panel">
-                    <div class="indicators__tab-data">
-                      Объём рентабельных запасов, млн. т.
-                      <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">10,0</div>
-                    </div>
-                  </div>
-                </div>
-
               </div>
-
-              <div class="tab-pane fade" id="tabs-2">
-
-                <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
-                  <div class="panel">
-                    <div class="panel-body">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
             </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="indicators__tab-data">
+                  NPV, млн. руб.
+                  <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">50</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="indicators__tab-data">
+                  ДДГ, млн. руб.
+                  <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">120</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="indicators__tab-data">
+                  IRR, %
+                  <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">50</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="indicators__tab-data">
+                  Объём рентабельных запасов, млн. т.
+                  <div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">10,0</div>
+                </div>
+              </div>
+            </div>
+
+            <!--<ul class="nav nav-tabs nav-tabs-simple" id="tab-resize-tabs">-->
+              <!--<li>-->
+                <!--<div class="indicators__tab-title font-weight-bold">Промысел:</div>-->
+              <!--</li>-->
+              <!--<li class=" active">-->
+                <!--<a href="#tabs-1" data-toggle="tab">Нефтяной</a>-->
+              <!--</li>-->
+              <!--<li>-->
+                <!--<a href="#tabs-2" data-toggle="tab">Газовый</a>-->
+              <!--</li>-->
+            <!--</ul>-->
+
+            <!--<div class="tab-content row m-t-1">-->
+
+              <!--<div class="tab-pane fade in active" id="tabs-1">-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--КИН-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">0,31</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--NPV, млн. руб.-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">50</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--ДДГ, млн. руб.-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">120</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--IRR, %-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">50</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--Объём рентабельных запасов, млн. т.-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">10,0</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+              <!--</div>-->
+
+              <!--<div class="tab-pane fade" id="tabs-2">-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--IRR, %-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">50</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--КИН-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">0,31</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--NPV, млн. руб.-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">50</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">-->
+                  <!--<div class="panel">-->
+                    <!--<div class="indicators__tab-data">-->
+                      <!--ДДГ, млн. руб.-->
+                      <!--<div class="indicators__tab-info font-weight-semibold font-size-24 line-height-1">120</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+
+              <!--</div>-->
+
+            <!--</div>-->
 
           </div>
         </div>
@@ -532,7 +606,7 @@
     // -------------------------------------------------------------------------
     // Initialize DEMO
 
-    require(['jquery', 'px/pixeladmin', 'px/plugins/px-nav', 'px/plugins/px-navbar', 'px/plugins/px-footer', 'px/extensions/perfect-scrollbar.jquery'], function($) {
+    require(['jquery', 'px/pixeladmin', 'px/plugins/px-tab-resize','px/plugins/px-nav', 'px/plugins/px-navbar', 'px/plugins/px-footer', 'px/extensions/perfect-scrollbar.jquery'], function($) {
       var file = String(document.location).split('/').pop();
 
       // Remove unnecessary file parts
@@ -553,6 +627,7 @@
 
       $('#navbar-notifications').perfectScrollbar();
       $('#navbar-messages').perfectScrollbar();
+
     });
   </script>
 </body>
