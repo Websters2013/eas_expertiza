@@ -405,146 +405,7 @@ a.px-demo-brand:hover {
   word-spacing: -2px;
 }
 /*=========================================*/
-.p-20 {
-  padding: 0 20px;
-}
-.p-18 {
-  padding: 0 18px;
-}
-.panels__item {
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
-  height: 220px;
-}
-.panels__item h5 {
-  padding-top: 11px;
-  padding-bottom: 13px;
-  margin: 0;
-  background-color: #f1f1f1;
-  border-bottom: 1px solid #e5e5e5;
-  position: relative;
-}
-.panels__content {
-  padding-top: 15px;
-}
-.panels__content ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.panels__content li {
-  line-height: 24px;
-  position: relative;
-  padding-right: 30px;
-  overflow: hidden;
-}
-.panels__content li.check:after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 24px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, calc(-50% + 1px));
-  background-image: url(../image/check.png);
-  background-position: 49% 50%;
-  background-repeat: no-repeat;
-  background-color: #ffffff;
-}
-.panels__content i {
-  letter-spacing: 4.1px;
-  padding-left: 9px;
-  padding-right: 4px;
-}
-.info,
-.danger{
-  display: inline-block;
-  padding: 0 10px;
-  border-radius: 20px;
-  background: #7ebee3;
-  line-height: 20px;
-  height: 21px;
-  font-size: 12px;
-  margin-left: 2px;
-}
-.danger {
-  background: #ff6e56;
-  padding: 0 12px 0 11px;
-}
-.info {
-  padding: 0 15px 0 14px;
-}
-.wrap {
-  position: absolute;
-  padding-right: 8px;
-  right: 0;
-  top: 3px;
-  display: inline-flex;
-  justify-content: end;
-  flex-flow: row;
-  padding-left: 5px;
-  background-color: #ffffff;
-}
-.btn_remove {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(-14px, -50%);
-  background-image: url(../image/delete.png);
-  background-repeat: no-repeat;
-  background-color: rgba(0,0,0,0) !important;
-  border: none;
-  height: 12px;
-  width: 12px;
-  padding: 0;
-}
-.btn_remove:hover {
-  background-color: rgba(0,0,0,0) !important;
-}
-.panels__content p {
-  line-height: 20px;
-  margin-top: 2px;
-  margin-bottom: 14px;
-}
-.panels__content a {
-  display: block;
-  text-decoration: underline;
-  color: #007dc5;
-  line-height: 24px;
-}
-@media (min-width: 768px) {
-  .user {
-    width: 143px;
-    border-left: 1px solid #d0d0d0;
-    position: relative;
-  }
-  .list li:nth-child(2) a {
-    padding-right: 43px;
-  }
-  .list li:nth-child(1) a {
-    padding-right: 18px;
-  }
-  .navbar-nav>li>a.user span:after {
-    position: absolute;
-    top: calc(50% - 1px);
-    right: 17px;
-    display: block;
-    width: 5px;
-    height: 5px;
-    margin-top: -2px;
-    content: '';
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(135deg);
-    border-width: 1px 1px 0 0;
-    border-style: solid;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
 
-}
 @media (min-width: 992px) {
   .px-nav:not(.px-nav-expand) .px-nav-content>.px-nav-item>a .px-nav-icon {
     opacity: 0;
@@ -623,6 +484,10 @@ a.px-demo-brand:hover {
   align-items: center;
   margin-left: 24px;
 }
+.inline-elements {
+  display: flex;
+  align-items: center;
+}
 .close_large {
   opacity: 1;
   font-size: 21px;
@@ -635,6 +500,38 @@ a.px-demo-brand:hover {
 }
 #chartdiv .amcharts-chart-div > a {
   display: none !important;
+}
+.custom-table .custom-control-input:checked~.custom-control-indicator {
+  background-color: #0c4675;
+  box-shadow: none;
+}
+.custom-table input {
+  width: 44px;
+  padding: 4px;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  text-align: center;
+}
+.custom-table td {
+  vertical-align: middle !important;
+  text-align: center;
+}
+.custom-table tbody th {
+  vertical-align: middle !important;
+}
+.custom-table .inline-elements {
+  justify-content: center;
+}
+.btn-custom {
+  color: #fff;
+  background-color: #0c4675 !important;
+  border-color: #0c4675 !important;
+  min-width: 185px;
+  text-align: center;
+}
+.btn-custom:hover {
+  color: #0c4675;
+  background-color: #fff !important;
 }
 
 @media (max-width: 1200px) {

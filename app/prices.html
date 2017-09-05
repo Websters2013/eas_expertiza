@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Utility classes - PixelAdmin: Responsive Bootstrap Template</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=cyrillic" rel="stylesheet" type="text/css">
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- DEMO ONLY: Function for the proper stylesheet loading according to the demo settings -->
+  <script>function _pxDemo_loadStylesheet(a,b,c){var c=c||decodeURIComponent((new RegExp(";\\s*"+encodeURIComponent("px-demo-theme")+"\\s*=\\s*([^;]+)\\s*;","g").exec(";"+document.cookie+";")||[])[1]||"clean"),d="rtl"===document.getElementsByTagName("html")[0].getAttribute("dir");document.write(a.replace(/^(.*?)((?:\.min)?\.css)$/,'<link href="$1'+(c.indexOf("dark")!==-1&&a.indexOf("/css/")!==-1&&a.indexOf("/themes/")===-1?"-dark":"")+(!d||0!==a.indexOf("assets/css")&&0!==a.indexOf("assets/demo")?"":".rtl")+'$2" rel="stylesheet" type="text/css"'+(b?'class="'+b+'"':"")+">"))}</script>
+
+  <!-- DEMO ONLY: Set RTL direction -->
+  <script>"ltr"!==document.getElementsByTagName("html")[0].getAttribute("dir")&&"1"===decodeURIComponent((new RegExp(";\\s*"+encodeURIComponent("px-demo-rtl")+"\\s*=\\s*([^;]+)\\s*;","g").exec(";"+document.cookie+";")||[])[1]||"0")&&document.getElementsByTagName("html")[0].setAttribute("dir","rtl");</script>
+
+  <!-- DEMO ONLY: Load PixelAdmin core stylesheets -->
+  <script>
+    _pxDemo_loadStylesheet('assets/css/bootstrap.min.css', 'px-demo-stylesheet-bs');
+    _pxDemo_loadStylesheet('assets/css/pixeladmin.min.css', 'px-demo-stylesheet-core');
+    _pxDemo_loadStylesheet('assets/css/widgets.min.css', 'px-demo-stylesheet-widgets');
+  </script>
+
+  <!-- DEMO ONLY: Load theme -->
+  <script>
+    function _pxDemo_loadTheme(a){var b=decodeURIComponent((new RegExp(";\\s*"+encodeURIComponent("px-demo-theme")+"\\s*=\\s*([^;]+)\\s*;","g").exec(";"+document.cookie+";")||[])[1]||"clean");_pxDemo_loadStylesheet(a+b+".min.css","px-demo-stylesheet-theme",b)}
+    _pxDemo_loadTheme('assets/css/themes/');
+  </script>
+
+  <!-- Demo assets -->
+  <script>_pxDemo_loadStylesheet('assets/demo/demo.css');</script>
+  <!-- / Demo assets -->
+
+  <!-- holder.js -->
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/holder/2.9.0/holder.js"></script>
+
+  <!-- Pace.js -->
+  <script src="assets/pace/pace.min.js"></script>
+
+  <!-- Require.js -->
+  <script src="assets/js/require.js"></script>
+  <script src="assets/js/requirejs-config.js"></script>
+  <script>
+    requirejs.config({
+      baseUrl: 'assets/js',
+
+      // Demo script path
+      paths: { demo: '../demo/demo' }
+    });
+  </script>
+
+  <!-- Require demo script -->
+  <script>require(['demo']);</script>
+
+  <!-- Custom styling -->
+  <style>
+    .spacing-example > div,
+    .borders-example > div,
+    .blocks-example {
+      margin-top: 20px;
+    }
+
+    .floating-example {
+      margin: 10px;
+    }
+
+    .floating-example > span {
+      border: 1px solid #ddd;
+    }
+
+    .spacing-example > div > div,
+    .blocks-example {
+      background: #ddd;
+      background: repeating-linear-gradient(
+        45deg,
+        #e0e0e0,
+        #e0e0e0 10px,
+        #ddd 10px,
+        #ddd 20px
+      );
+    }
+
+    .spacing-example > div > div > div {
+      background: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .spacing-example .m-x-auto {
+      width: 150px;
+    }
+
+    .borders-example > div > div {
+      background: #f1f1f1;
+      border-color: #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .blocks-example {
+      padding: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .blocks-example > div {
+      background: #fff;
+    }
+
+    .text-examples .panel-body > p:last-child {
+      margin-bottom: 0;
+    }
+
+    .colors-example > a {
+      display: block;
+      padding: 5px;
+    }
+
+    .colors-example > a + a {
+      margin-top: 10px;
+    }
+
+    .bg-example > div a {
+      padding: 12px;
+      display: block;
+    }
+
+    .bg-example > div + div {
+      margin-top: 10px;
+    }
+
+    .border-colors-example > div {
+      padding: 12px;
+    }
+
+    .border-colors-example > div + div {
+      margin-top: 10px;
+    }
+
+    .valign-example > div {
+      display: inline-block;
+      width: 100%;
+      border: 1px solid #e0e0e0;
+      padding: 0 10px;
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .valign-example > div > span,
+    .valign-example > div > code {
+      line-height: 1 !important;
+    }
+  </style>
+  <!-- / Custom styling -->
+</head>
+<body>
+  <nav class="px-nav px-nav-left">
+    <button type="button" class="px-nav-toggle" data-toggle="px-nav">
+      <span class="px-nav-toggle-arrow"></span>
+      <span class="navbar-toggle-icon"></span>
+      <span class="px-nav-toggle-label font-size-11">HIDE MENU</span>
+    </button>
+
+    <ul class="px-nav-content">
+      <li class="px-nav-item">
+        <a href="#"><i class="px-nav-icon ion-ios-pulse-strong"></i><span class="px-nav-label">Конфигурация ПТД</span><i class="fa fa-cog settings" aria-hidden="true"></i></a>
+      </li>
+      <li class="px-nav-item px-nav-dropdown color1">
+        <a href="#"><i class="px-nav-icon ion-erlenmeyer-flask"></i><span class="px-nav-label">Мои экспертизы</span></a>
+
+        <ul class="px-nav-dropdown-menu">
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Новая экспертиза</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Мои экспертизы</span></a></li>
+          <li class="px-nav-item"><a href="widgets-timeline.html"><span class="px-nav-label">Сравнение экспертиз</span></a></li>
+        </ul>
+      </li>
+      <li class="px-nav-item px-nav-dropdown color2">
+        <a href="#"><i class="px-nav-icon ion-monitor"></i><span class="px-nav-label">Исходные данные</span></a>
+        <ul class="px-nav-dropdown-menu">
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Месторождение</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Макроэкономика</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Цены</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Налоги</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Затраты</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Инфраструктура</span></a></li>
+        </ul>
+      </li>
+      <li class="px-nav-item px-nav-dropdown color3">
+        <a href="#"><i class="px-nav-icon ion-android-checkbox-outline"></i><span class="px-nav-label">Анализ</span></a>
+        <ul class="px-nav-dropdown-menu">
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Ставка дисконта</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Цены</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Налоги</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Затраты</span></a></li>
+        </ul>
+      </li>
+      <li class="px-nav-item px-nav-dropdown color4">
+        <a href="#"><i class="px-nav-icon ion-ios-keypad"></i><span class="px-nav-label">Бэнчмаркинг</span></a>
+        <ul class="px-nav-dropdown-menu">
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Капитальные</span></a></li>
+          <li class="px-nav-item"><a href="#"><span class="px-nav-label">Операционные</span></a></li>
+          </ul>
+      </li>
+      <li class="px-nav-item color5">
+        <a href="#"><i class="px-nav-icon ion-stats-bars"></i><span class="px-nav-label">Отчёты</span></a>
+      </li>
+    </ul>
+  </nav>
+  <style>
+    .clsss-2 {
+      fill: #007dc5;
+      fill-rule: evenodd;
+    }
+  </style>
+  <nav class="navbar px-navbar">
+    <!-- Header -->
+    <div class="navbar-header">
+      <a class="navbar-brand px-demo-brand" href="index.html"><span class="px-demo-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+          <defs>
+          </defs>
+          <path class="clsss-2" d="M87.216,32H74.784A0.8,0.8,0,0,1,74,31.216a0.723,0.723,0,0,1,.233-0.541,0.769,0.769,0,0,1,.551-0.224H87.216a0.769,0.769,0,0,1,.551.224,0.723,0.723,0,0,1,.233.541A0.8,0.8,0,0,1,87.216,32ZM86.451,20.333a0.833,0.833,0,0,0-.784-0.784,0.76,0.76,0,0,0-.616.3l-2.165,2.707a0.743,0.743,0,0,1-.5.3,0.771,0.771,0,0,1-.56-0.149l-1.9-1.437a0.757,0.757,0,0,0-.569-0.149,0.722,0.722,0,0,0-.513.28l-3.117,3.9a0.743,0.743,0,0,0-.168.485v1.55h10.9v-7ZM85.667,18a2.219,2.219,0,0,1,1.652.7A2.268,2.268,0,0,1,88,20.333v7.784a0.723,0.723,0,0,1-.233.541,0.769,0.769,0,0,1-.551.224H74.784a0.769,0.769,0,0,1-.551-0.224A0.723,0.723,0,0,1,74,28.117V25.784a2.228,2.228,0,0,1,.5-1.456l3.117-3.9a2.276,2.276,0,0,1,1.54-.831,2.253,2.253,0,0,1,1.689.42l1.288,0.989,1.717-2.128A2.227,2.227,0,0,1,85.667,18Z" transform="translate(-74 -18)"/>
+        </svg>
+      </span></span>ИАС <i>Экспертиза</i></a>
+    </div>
+
+    <!-- Navbar togglers -->
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#px-demo-navbar-collapse" aria-expanded="false"><i class="navbar-toggle-icon"></i></button>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="px-demo-navbar-collapse">
+
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle user" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+            <div class="px-navbar-image">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 19">
+                <circle class="cls-1" cx="9" cy="9" r="9"/>
+                <path class="cls-2" d="M1075.8,31.85c0-.083,0-0.191.01-0.327a3.509,3.509,0,0,1,.15-0.653,1.69,1.69,0,0,1,.39-0.7,3.106,3.106,0,0,1,.95-0.529c0.48-.192,1.02-0.4,1.61-0.608a12.129,12.129,0,0,0,1.32-.533,1.908,1.908,0,0,0,.82-0.784,2.092,2.092,0,0,0,.29-1.072,1.478,1.478,0,0,0-.45-0.894,3.938,3.938,0,0,1-.74-1.44,7.034,7.034,0,0,1-.29-2.1,4.616,4.616,0,0,1,.26-1.592,2.793,2.793,0,0,1,.69-1.117,2.914,2.914,0,0,1,1-.636,3.259,3.259,0,0,1,1.19-.216,3.183,3.183,0,0,1,1.19.216,3.115,3.115,0,0,1,1,.636,2.793,2.793,0,0,1,.69,1.117,4.616,4.616,0,0,1,.26,1.592,7.389,7.389,0,0,1-.28,2.1,4.1,4.1,0,0,1-.74,1.44,1.469,1.469,0,0,0-.46.894,2.2,2.2,0,0,0,.29,1.069,1.927,1.927,0,0,0,.83.787,11.008,11.008,0,0,0,1.31.533c0.6,0.213,1.14.416,1.61,0.608a3.025,3.025,0,0,1,.94.529,1.587,1.587,0,0,1,.39.667,2.882,2.882,0,0,1,.15.715l0.02,0.3S1089.83,35,1083,35,1075.8,31.85,1075.8,31.85Z" transform="translate(-1074 -16)"/>
+              </svg>
+            </div>
+            <span class="hidden-md">Username</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="pages-profile-v2.html"><span class="label label-warning pull-xs-right"><i class="fa fa-asterisk"></i></span>Профиль</a></li>
+            <li><a href="pages-account.html">Лицензия на продукт</a></li>
+            <!--<li><a href="pages-messages-list.html"><i class="dropdown-icon fa fa-envelope"></i>&nbsp;&nbsp;Messages</a></li>-->
+            <li class="divider"></li>
+            <li><a href="pages-signin-v1.html"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Выйти</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right list">
+        <li class="dropdown">
+          <a href="#">Вопросы и ответы</a>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Техническая поддержка</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+  <div class="px-content">
+
+    <ol class="breadcrumb font-size-18">
+      <li><img src="assets/image/breadcrumbs-icon.png" class="p-r-1" alt=""><a href="#">Исходные данные</a></li>
+      <li class="active">Цены</li>
+    </ol>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert alert-danger box-container">
+          <div class="box-cell valign-middle col-xs-11">
+            <div class="box-cell valign-middle">
+              <i class="font-size-52 ion-ios-information-outline"></i>
+            </div>
+            <div class="box-cell valign-middle p-l-1">
+              <p>Обнаружены существенные расхождения между фактическими/расчётными показателями и данными ПТД.</p>
+              <p>Часть данных не была обнаружена.</p>
+              <p>Выберите данные, которые будут использоваться по умолчанию.</p>
+            </div>
+          </div>
+          <div class="box-cell valign-middle col-xs-1">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="panel indicators">
+          <div class="panel-heading bg-white darker">
+            <div class="inline-elements">
+              <span class="panel-title font-weight-bold">Выбор вида УВС</span>
+              <div class="dropdown">
+                <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  Месторождение
+                </button>
+                <div class="dropdown-menu">
+                  <li><a href="#">Месторождение 1</a></li>
+                  <li><a href="#">Месторождение 2</a></li>
+                  <li><a href="#">Месторождение 3</a></li>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table custom-table">
+                <thead>
+                <tr>
+                  <th>Показатель</th>
+                  <th></th>
+                  <th class="text-xs-center"><div>Единица</div> измерений</th>
+                  <th class="text-xs-center"><div>Значение</div> ПТД <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Значение ПТД"></i></th>
+                  <th class="text-xs-center"><div>Рекомендуемое</div> значение</th>
+                  <th class="text-xs-center"><div>Отклонение,</div> % <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Отклонение, %"></i></th>
+                  <th class="text-xs-center"><div>Выбранное</div> значение <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Выбранное значение"></i></th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="danger">
+                  <th scope="row">Показатель для расчета нетбэка 1</th>
+                  <td><i class="ion-ios-information" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
+                  <td>$/барр.</td>
+                  <td>
+                    <div class="inline-elements">
+                      <label class="custom-control custom-radio" for="grid-input-7">
+                        <input type="radio" id="grid-input-7" name="grid-radios-2" class="custom-control-input" checked="">
+                        <span class="custom-control-indicator"></span>
+                      </label>
+                      <input type="text" value="35" placeholder="">
+                    </div>
+                  </td>
+                  <td>
+                    <label class="custom-control custom-radio radio-inline" for="grid-input-6">
+                      <input type="radio" id="grid-input-6" name="grid-radios-1" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      43,0
+                    </label>
+                  </td>
+                  <td>?</td>
+                  <td></td>
+                  <td class="p-y-0"><i class="font-size-24 font-weight-bold ion-ios-information-outline" data-toggle="tooltip" data-placement="left" title="Справочная информация по показателям"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row">Показатель для расчета нетбэка 2</th>
+                  <td><i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
+                  <td>$/барр.</td>
+                  <td>
+                    <div class="inline-elements">
+                      <label class="custom-control custom-radio" for="grid-input-8">
+                        <input type="radio" id="grid-input-8" name="grid-radios-2" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                      </label>
+                      <input type="text" value="39" placeholder="">
+                    </div>
+                  </td>
+                  <td>
+                    <label class="custom-control custom-radio radio-inline" for="grid-input-5">
+                      <input type="radio" id="grid-input-5" name="grid-radios-1" class="custom-control-input" checked="">
+                      <span class="custom-control-indicator"></span>
+                      41,5
+                    </label>
+                  </td>
+                  <td>1,2</td>
+                  <td></td>
+                  <td class="p-y-0"></td>
+                </tr>
+                <tr class="warning">
+                  <th scope="row">Транспортные затраты, в том числе:</th>
+                  <td><i class="ion-ios-information" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
+                  <td>$/т</td>
+                  <td>
+                    <div class="inline-elements">
+                      <label class="custom-control custom-radio" for="grid-input-9">
+                        <input type="radio" id="grid-input-9" name="grid-radios-2" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                      </label>
+                      <input type="text" value="29,5" placeholder="">
+                    </div>
+                  </td>
+                  <td>
+                    <label class="custom-control custom-radio radio-inline" for="grid-input-4">
+                      <input type="radio" id="grid-input-4" name="grid-radios-1" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      23,0
+                    </label>
+                  </td>
+                  <td>23,0</td>
+                  <td></td>
+                  <td class="p-y-0"><i class="font-size-24 font-weight-bold ion-ios-information-outline" data-toggle="tooltip" data-placement="left" title="Справочная информация по показателям"></i></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="p-l-3">- фрахт</th>
+                  <td><i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
+                  <td>$/т</td>
+                  <td></td>
+                  <td>10</td>
+                  <td></td>
+                  <td></td>
+                  <td class="p-y-0"></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="p-l-3">- перевалка</th>
+                  <td><i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
+                  <td>$/т</td>
+                  <td></td>
+                  <td>8</td>
+                  <td></td>
+                  <td></td>
+                  <td class="p-y-0"></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="p-l-3">- транспортировка</th>
+                  <td><i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
+                  <td>$/т</td>
+                  <td></td>
+                  <td>5,3</td>
+                  <td></td>
+                  <td></td>
+                  <td class="p-y-0"></td>
+                </tr>
+                <tr class="danger">
+                  <th class="b-t-2" scope="row">Итог расчёта:</th>
+                  <td class="b-t-2"></td>
+                  <td class="b-t-2">руб./т</td>
+                  <td class="b-t-2">
+                    <div><b>Расчет</b> 60,0</div>
+                    <div><b>ПТД</b> <input type="text" value="61" placeholder=""></div>
+                  </td>
+                  <td class="b-t-2">107,5</td>
+                  <td class="b-t-2">56,7</td>
+                  <td class="b-t-2"><input type="text" value="61" placeholder=""></td>
+                  <td class="b-t-2"><i class="font-size-24 font-weight-bold ion-ios-information-outline" data-toggle="tooltip" data-placement="left" title="Справочная информация по показателям"></i></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <button type="button" class="btn btn-custom">Сохранить</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="panel indicators">
+          <div class="panel-heading bg-white darker">
+            <span class="panel-title font-weight-bold">Основные показатели</span>
+            <button type="button" class="btn btn-outline">Сбросить</button>
+
+            <div class="pull-xl-right">
+              <div class="justify-align">
+                <span class="panel-title">Вариант разработки</span>
+                <div class="dropdown">
+                  <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Вариант 1 (реко...
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Вариант 1</a></li>
+                    <li><a href="#">Вариант 2</a></li>
+                    <li><a href="#">Вариант 3</a></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pull-xl-right">
+              <div class="justify-align">
+                <span class="panel-title">Периметр</span>
+                <div class="dropdown dropdown-outline">
+                  <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Месторождение
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Месторождение 1</a></li>
+                    <li><a href="#">Месторождение 2</a></li>
+                    <li><a href="#">Месторождение 3</a></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="panel-body">
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="panel-footer bg-white darker">
+                  КИН
+                  <div class="font-weight-semibold font-size-24 line-height-1">0,31</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="panel-footer bg-white darker">
+                  NPV, млн. руб.
+                  <div class="font-weight-semibold font-size-24 line-height-1">50</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="panel-footer bg-white darker">
+                  ДДГ, млн. руб.
+                  <div class="font-weight-semibold font-size-24 line-height-1">120</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-2">
+              <div class="panel">
+                <div class="panel-footer bg-white darker">
+                  IRR, %
+                  <div class="font-weight-semibold font-size-24 line-height-1">50</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-xl-4">
+              <div class="panel">
+                <div class="panel-footer bg-white darker">
+                  Объём рентабельных запасов, млн. т.
+                  <div class="font-weight-semibold font-size-24 line-height-1">10,0</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <footer class="px-footer px-footer-bottom p-t-0"></footer>
+
+  <!-- ==============================================================================
+  |
+  |  SCRIPTS
+  |
+  =============================================================================== -->
+
+
+  <script type="text/javascript">
+    // -------------------------------------------------------------------------
+    // Initialize DEMO
+
+    require(['jquery', 'px/pixeladmin', 'px/plugins/px-tab-resize', 'px/plugins/px-nav', 'px/plugins/px-navbar', 'px/plugins/px-footer', 'px/extensions/perfect-scrollbar.jquery'], function ($) {
+        var file = String(document.location).split('/').pop();
+
+        // Remove unnecessary file parts
+        file = file.replace(/(\.html).*/i, '$1');
+
+      if (!/.html$/i.test(file)) {
+        file = 'index.html';
+      }
+
+      // Activate current nav item
+      $('body > .px-nav')
+        .find('.px-nav-item > a[href="' + file + '"]')
+        .parent()
+        .addClass('active');
+
+      $('body > .px-nav').pxNav();
+      $('body > .px-footer').pxFooter();
+
+      $('#navbar-notifications').perfectScrollbar();
+      $('#navbar-messages').perfectScrollbar();
+
+    });
+    // -------------------------------------------------------------------------
+    // Initialize Bootstrap alerts
+
+    require(['px-bootstrap/alert']);
+  </script>
+
+  <script>
+      // -------------------------------------------------------------------------
+      // Initialize Page alerts
+
+      require(['jquery', 'px/plugins/px-block-alert'], function ($) {
+          $('#page-alerts-demo').on('click', 'button', function () {
+              var $this = $(this);
+
+              // Go to the top
+              $('html, body').animate({ scrollTop: 0 }, 200);
+
+              // Wait while page is scrolling
+              setTimeout(function () {
+                  if ($this.hasClass('page-alerts-clear-btn')) {
+                      return $('.px-content').pxBlockAlert('clear', $this.attr('data-namespace'));
+                  }
+
+                  var data = $this.data();
+                  var content = data.content;
+
+                  delete data[content];
+
+                  $('.px-content').pxBlockAlert(content, data);
+              }, 300);
+          });
+      });
+    // -------------------------------------------------------------------------
+    // Initialize tooltips
+
+    require(['jquery', 'px/extensions/tooltip'], function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</body>
+</html>
