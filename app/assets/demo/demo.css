@@ -346,7 +346,6 @@ a.px-demo-brand:hover {
   top: 50%;
   transform: translate(0,-50%);
   font-size: 18px;
-  display: none;
 }
 
 .color1,
@@ -407,19 +406,21 @@ a.px-demo-brand:hover {
 /*=========================================*/
 
 @media (min-width: 992px) {
-  .px-nav:not(.px-nav-expand) .px-nav-content>.px-nav-item>a .px-nav-icon {
-    opacity: 0;
-    position: relative;
-    top: 2px;
-  }
-  .px-nav:not(.px-nav-expand) .px-nav-content>.px-nav-item:first-child>a .px-nav-icon {
-    opacity: 1;
-  }
-  .settings {
-    display: inline;
-  }
+  /*.px-nav:not(.px-nav-expand) .px-nav-content>.px-nav-item>a .px-nav-icon {*/
+    /*opacity: 0;*/
+    /*position: relative;*/
+    /*top: 2px;*/
+  /*}*/
+  /*.px-nav:not(.px-nav-expand) .px-nav-content>.px-nav-item:first-child>a .px-nav-icon {*/
+    /*opacity: 1;*/
+  /*}*/
+  /*.settings {*/
+    /*display: inline;*/
+  /*}*/
 }
-
+.px-nav-icon {
+  color: #007dc5;
+}
 .indicators {
 
 }
@@ -478,6 +479,12 @@ a.px-demo-brand:hover {
 }
 .data-checking i {
   color: #1fc96f;
+}
+.data-checking .label-danger {
+  background-color: #ff8470;
+}
+.data-checking .label-info {
+  background-color: #ffda78;
 }
 .justify-align {
   display: flex;
