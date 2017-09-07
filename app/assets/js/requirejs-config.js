@@ -5,6 +5,7 @@ require.config({
         px: "pixeladmin",
         "px-libs": "libs",
         "px-bootstrap": "bootstrap",
+        "datepicker": "libs/bootstrap-datepicker",
         Chartist: "libs/chartist",
         c3: "libs/c3",
         d3: "libs/d3",
