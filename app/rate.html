@@ -177,13 +177,16 @@
   <ul class="px-nav-content">
     <li class="px-nav-item">
       <a href="#">
-        <i class="px-nav-icon ion-ios-pulse-strong"></i>
-        <span class="px-nav-label">Конфигурация ПТД</span>
-        <i class="fa fa-cog settings" aria-hidden="true"></i>
+        <i class="px-nav-icon"><img src="assets/image/menu-icon4.png" alt=""></i>
+        <span class="px-nav-label font-size-14">Конфигурация ПТД</span>
+        <i class="settings"><img src="assets/image/menu-icon7.png" alt=""></i>
       </a>
     </li>
     <li class="px-nav-item px-nav-dropdown">
-      <a href="#"><i class="px-nav-icon ion-erlenmeyer-flask"></i><span class="px-nav-label">Мои экспертизы</span></a>
+      <a href="#">
+        <i class="px-nav-icon"><img src="assets/image/menu-icon3.png" alt=""></i>
+        <span class="px-nav-label font-size-14">Мои экспертизы</span>
+      </a>
 
       <ul class="px-nav-dropdown-menu">
         <li class="px-nav-item"><a href="#"><span class="px-nav-label">Новая экспертиза</span></a></li>
@@ -192,7 +195,10 @@
       </ul>
     </li>
     <li class="px-nav-item px-nav-dropdown">
-      <a href="#"><i class="px-nav-icon ion-monitor"></i><span class="px-nav-label">Исходные данные</span></a>
+      <a href="#">
+        <i class="px-nav-icon"><img src="assets/image/menu-icon2.png" alt=""></i>
+        <span class="px-nav-label font-size-14">Исходные данные</span>
+      </a>
       <ul class="px-nav-dropdown-menu">
         <li class="px-nav-item"><a href="#"><span class="px-nav-label">Месторождение</span></a></li>
         <li class="px-nav-item"><a href="#"><span class="px-nav-label">Макроэкономика</span></a></li>
@@ -203,7 +209,10 @@
       </ul>
     </li>
     <li class="px-nav-item px-nav-dropdown">
-      <a href="#"><i class="px-nav-icon ion-android-checkbox-outline"></i><span class="px-nav-label">Анализ</span></a>
+      <a href="#">
+        <i class="px-nav-icon"><img src="assets/image/menu-icon5.png" alt=""></i>
+        <span class="px-nav-label font-size-14">Анализ</span>
+      </a>
       <ul class="px-nav-dropdown-menu">
         <li class="px-nav-item"><a href="#"><span class="px-nav-label">Ставка дисконта</span></a></li>
         <li class="px-nav-item"><a href="#"><span class="px-nav-label">Цены</span></a></li>
@@ -212,14 +221,20 @@
       </ul>
     </li>
     <li class="px-nav-item px-nav-dropdown">
-      <a href="#"><i class="px-nav-icon ion-ios-keypad"></i><span class="px-nav-label">Бэнчмаркинг</span></a>
+      <a href="#">
+        <i class="px-nav-icon"><img src="assets/image/menu-icon1.png" alt=""></i>
+        <span class="px-nav-label font-size-14">Бэнчмаркинг</span>
+      </a>
       <ul class="px-nav-dropdown-menu">
         <li class="px-nav-item"><a href="#"><span class="px-nav-label">Капитальные</span></a></li>
         <li class="px-nav-item"><a href="#"><span class="px-nav-label">Операционные</span></a></li>
       </ul>
     </li>
-    <li class="px-nav-item color5">
-      <a href="#"><i class="px-nav-icon ion-stats-bars"></i><span class="px-nav-label">Отчёты</span></a>
+    <li class="px-nav-item">
+      <a href="#">
+        <i class="px-nav-icon"><img src="assets/image/menu-icon6.png" alt=""></i>
+        <span class="px-nav-label font-size-14">Отчёты</span>
+      </a>
     </li>
   </ul>
 </nav>
@@ -297,8 +312,8 @@
           </div>
           <div class="panel-body font-size-12">
             Выбор вида УВС
-            <div class="panel-group" id="accordion1">
-              <div class="box">
+            <div class="panel-group m-b-1" id="accordion1">
+              <div class="box m-b-0">
                 <div class="box-row bg-white darker">
                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true">
                     Нефть
@@ -325,17 +340,17 @@
                       <input type="checkbox" value="option1"> Связать цену на нефть и курс <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Связать"></i>
                     </label>
                   </p>
-                  <ul class="nav nav-pills nav-stacked text-xs-center">
-                    <li class="m-b-1">
-                      <a href="#" class="b-a-1">Восстановить значения по умолчанию</a>
-                    </li>
-                    <li>
-                      <a href="#" class="b-a-1">Установить в качестве значения по умолчанию</a>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
+            <ul class="nav nav-pills nav-stacked text-xs-center">
+              <li class="m-b-1">
+                <a href="#" class="b-a-1">Восстановить значения по умолчанию</a>
+              </li>
+              <li>
+                <a href="#" class="b-a-1">Установить в качестве значения по умолчанию</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -353,11 +368,16 @@
                 <div id="chartdiv"></div>
                 <div class="panel-body inline-elements">
                   <span class="p-r-1">с</span>
-                  <input class="rate__date p-l-1" type="date" class="form-control" placeholder="Date input">
+                  <input type="text" class="form-control rate__data" name="start">
                   <span class="p-x-1">по</span>
-                  <input class="rate__date p-l-1" type="date" class="form-control" placeholder="Date input">
+                  <input type="text" class="form-control rate__data" name="end">
                   <button type="button" class="btn m-l-1">Показать</button>
                 </div>
+                <!--<div class="input-daterange input-group" id="datepicker-range">-->
+                  <!--<input type="text" class="form-control" name="start">-->
+                  <!--<span class="input-group-addon">to</span>-->
+                  <!--<input type="text" class="form-control" name="end">-->
+                <!--</div>-->
               </div>
             </div>
           </div>
@@ -473,6 +493,9 @@
           </div>
           <div class="panel-body bg-white">
             <div id="chartdiv2"></div>
+            <p class="font-size-14 text-center">
+              <strong>Текущая конфигурация:</strong> Месторождение, вариант 1 (рекомендуемый)
+            </p>
           </div>
         </div>
       </div>
@@ -594,7 +617,7 @@
     // -------------------------------------------------------------------------
     // Initialize DEMO
 
-    require(['jquery', 'px/pixeladmin', 'px/plugins/px-tab-resize', 'px/plugins/px-nav', 'px/plugins/px-navbar', 'px/plugins/px-footer', 'px/extensions/perfect-scrollbar.jquery'], function ($) {
+    require(['jquery', 'px/pixeladmin', 'jqueryui', 'px/plugins/px-tab-resize', 'px/plugins/px-nav', 'px/plugins/px-navbar', 'px/plugins/px-footer', 'px/extensions/perfect-scrollbar.jquery'], function ($) {
         var file = String(document.location).split('/').pop();
 
         // Remove unnecessary file parts
@@ -615,6 +638,7 @@
 
       $('#navbar-notifications').perfectScrollbar();
       $('#navbar-messages').perfectScrollbar();
+        $('#datepicker-range').datepicker();
 
     });
     // -------------------------------------------------------------------------
@@ -655,6 +679,7 @@
     require(['jquery', 'px/extensions/tooltip'], function() {
         $('[data-toggle="tooltip"]').tooltip();
     });
+
   </script>
 </body>
 </html>

@@ -375,9 +375,6 @@ a.px-demo-brand:hover {
   border: none;
   height: auto;
 }
-.px-nav-item:first-child .px-nav-icon {
-  margin-right: 7px;
-}
 .px-nav-dropdown-menu .px-nav-item:first-child {
    margin-top: 9px;
  }
@@ -419,6 +416,7 @@ a.px-demo-brand:hover {
   /*}*/
 }
 .px-nav-icon {
+  margin: 0 2px 0 -7px;
   color: #007dc5;
 }
 .indicators {
@@ -557,7 +555,7 @@ a.px-demo-brand:hover {
   width: 92px;
 }
 .rate input.rate__data {
-  width: 192px;
+  width: 92px;
 }
 .rate .nav-pills a {
   border-color: rgba(0,0,0,.05);
