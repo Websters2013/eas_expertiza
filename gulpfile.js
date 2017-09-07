@@ -39,7 +39,7 @@ var paths = {
     ],
     vendorScripts: 'app/assets/**/*.js',
     watchScripts: 'app/js/**/*.js',
-    images: 'app/img/**/*',
+    images: 'app/assets/image/**/*',
     pictures: 'app/pic/**/*',
     php: 'app/php/**/*',
     fonts: 'app/fonts/**/*'
@@ -113,7 +113,7 @@ gulp.task( 'scripts', function () {
 gulp.task('images', function() {
     return gulp.src(paths.images)
         .pipe(imagemin({optimizationLevel: 5}))
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('dist/assets/image'));
 });
 
 gulp.task('pictures', function() {
