@@ -286,7 +286,7 @@
     </ol>
 
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-3">
         <div class="panel">
           <div class="panel-heading bg-white darker">
             <span class="panel-title font-weight-bold">Ручной ввод</span>
@@ -294,54 +294,54 @@
           <div class="panel-body font-size-12">
             Выбор вида УВС
             <div class="panel-group" id="accordion1">
-              <div class="panel">
-                <div class="panel-heading bg-white darker">
+              <div class="box">
+                <div class="box-row bg-white darker">
                   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true">
                     Нефть
+                    <div class="panel-heading-icon"><i class="ion-arrow-up-b"></i></div>
                   </a>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in" aria-expanded="true" style="">
-                  <div class="panel-body">
-                    <div>
-                      Цена на нефть Юралс <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Цена"></i>
-                      <p class="inline-elements">
-                        <input type="text p-x-1" value="50,0" placeholder="">
-                        <span class="p-l-1">долл./барр.</span>
-                      </p>
-                    </div>
-                    <div>
-                      Курс доллара <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Курс"></i>
-                      <p class="inline-elements">
-                        <input type="text p-x-1" value="65,0" placeholder="">
-                        <span class="p-l-1">руб./долл.</span>
-                      </p>
-                    </div>
-                    <p>
-                      <label class="checkbox-inline">
-                        <input type="checkbox" value="option1"> Связать цену на нефть и курс <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Связать"></i>
-                      </label>
+                <div id="collapseOne" class="panel-collapse collapse in p-y-1" aria-expanded="true" style="">
+                  <div>
+                    Цена на нефть Юралс <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Цена"></i>
+                    <p class="inline-elements">
+                      <input class="rate__field p-x-1" type="tex" value="50,0" placeholder="">
+                      <span class="p-l-1">долл./барр.</span>
                     </p>
-                    <ul class="nav nav-pills nav-stacked text-xs-center">
-                      <li class="m-b-1">
-                        <a href="#" class="b-a-1">Восстановить значения по умолчанию</a>
-                      </li>
-                      <li>
-                        <a href="#" class="b-a-1">Установить в качестве значения по умолчанию</a>
-                      </li>
-                    </ul>
                   </div>
+                  <div>
+                    Курс доллара <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Курс"></i>
+                    <p class="inline-elements">
+                      <input class="rate__field p-x-1" type="text" value="65,0" placeholder="">
+                      <span class="p-l-1">руб./долл.</span>
+                    </p>
+                  </div>
+                  <p>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" value="option1"> Связать цену на нефть и курс <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Связать"></i>
+                    </label>
+                  </p>
+                  <ul class="nav nav-pills nav-stacked text-xs-center">
+                    <li class="m-b-1">
+                      <a href="#" class="b-a-1">Восстановить значения по умолчанию</a>
+                    </li>
+                    <li>
+                      <a href="#" class="b-a-1">Установить в качестве значения по умолчанию</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-8">
+      <div class="col-lg-9">
         <div class="panel-group" id="accordion2">
           <div class="panel">
             <div class="panel-heading bg-white darker">
               <a class="accordion-toggle font-weight-bold" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="true">
                 Зависимость цены на нефть от курса доллара ($ за барр / $ за €)
+                <div class="panel-heading-icon"><i class="ion-chevron-up"></i></div>
               </a>
             </div>
             <div id="collapseTwo" class="panel-collapse collapse in" aria-expanded="true" style="">
@@ -349,9 +349,9 @@
                 <div id="chartdiv"></div>
                 <div class="panel-body inline-elements">
                   <span class="p-r-1">с</span>
-                  <input type="date" class="form-control" placeholder="Date input">
+                  <input class="rate__date p-l-1" type="date" class="form-control" placeholder="Date input">
                   <span class="p-x-1">по</span>
-                  <input type="date" class="form-control" placeholder="Date input">
+                  <input class="rate__date p-l-1" type="date" class="form-control" placeholder="Date input">
                   <button type="button" class="btn m-l-1">Показать</button>
                 </div>
               </div>
@@ -362,173 +362,149 @@
         <div class="panel alert p-a-0">
           <div class="panel-heading bg-white darker font-weight-bold">
             <button type="button" class="close" data-dismiss="alert">×</button>
-            Default alert
+            Профиль добычи ($ за барр / год)
           </div>
           <div class="panel-body bg-white">
 
+            <div class="row">
+              <div class="col-lg-12">
+                <p class="font-weight-bold m-b-1">Периметр</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <span>Объект</span>
+              </div>
+              <div class="col-lg-4">
+                <span>Тип графика</span>
+              </div>
+              <div class="col-lg-4">
+                <span>Выбор параметров</span>
+              </div>
+            </div>
+            <div class="row m-b-1">
+              <div class="col-lg-4">
+                <div class="dropdown dropdown-full">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Месторождение
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Месторождение 1</a></li>
+                    <li><a href="#">Месторождение 2</a></li>
+                    <li><a href="#">Месторождение 3</a></li>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="dropdown dropdown-full">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Экономич. - График 1
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Экономич. - График 1</a></li>
+                    <li><a href="#">Экономич. - График 2</a></li>
+                    <li><a href="#">Экономич. - График 3</a></li>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="dropdown dropdown-full">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Выбор при проверке
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Проверка 1</a></li>
+                    <li><a href="#">Проверка 2</a></li>
+                    <li><a href="#">Проверка 3</a></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4">
+                <span>Тип скважины</span>
+              </div>
+              <div class="col-lg-4">
+
+              </div>
+              <div class="col-lg-4">
+                <span>Вариант разработки</span>
+              </div>
+            </div>
+            <div class="row m-b-1">
+              <div class="col-lg-4">
+                <div class="dropdown dropdown-full">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Добывающие
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Добывающие 1</a></li>
+                    <li><a href="#">Добывающие 2</a></li>
+                    <li><a href="#">Добывающие 3</a></li>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+
+              </div>
+              <div class="col-lg-4">
+                <div class="dropdown dropdown-full">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Вариант 1 (рекоме...
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Вариант 1</a></li>
+                    <li><a href="#">Вариант 2</a></li>
+                    <li><a href="#">Вариант 3</a></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4">
+                <span>Список скважин</span>
+              </div>
+              <div class="col-lg-4">
+
+              </div>
+              <div class="col-lg-4">
+
+              </div>
+            </div>
+            <div class="row m-b-1">
+              <div class="col-lg-4">
+                <div class="dropdown dropdown-full">
+                  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Well
+                  </button>
+                  <div class="dropdown-menu">
+                    <li><a href="#">Well 1</a></li>
+                    <li><a href="#">Well 2</a></li>
+                    <li><a href="#">Well 3</a></li>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <a href="#" class="rate__link pull-xs-right">Сбросить параметры</a>
+              </div>
+              <div class="col-lg-4">
+                <button type="button" class="btn btn-custom pull-xs-right">Применить</button>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body bg-white">
+            <div id="chartdiv2"></div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="row">
-
-      <div class="col-md-12">
-        <div class="panel indicators">
-          <div class="panel-heading bg-white darker">
-            <div class="inline-elements">
-              <span class="panel-title font-weight-bold">Выбор вида УВС</span>
-              <div class="dropdown">
-                <button type="button" class="btn btn-outline dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  Месторождение
-                </button>
-                <div class="dropdown-menu">
-                  <li><a href="#">Месторождение 1</a></li>
-                  <li><a href="#">Месторождение 2</a></li>
-                  <li><a href="#">Месторождение 3</a></li>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="panel-body">
-            <div class="table-responsive">
-              <table class="table custom-table">
-                <thead>
-                <tr>
-                  <th>Показатель</th>
-                  <th></th>
-                  <th class="text-xs-center"><div>Единица</div> измерений</th>
-                  <th class="text-xs-center"><div>Значение</div> ПТД <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Значение ПТД"></i></th>
-                  <th class="text-xs-center"><div>Рекомендуемое</div> значение</th>
-                  <th class="text-xs-center"><div>Отклонение,</div> % <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Отклонение, %"></i></th>
-                  <th class="text-xs-center"><div>Выбранное</div> значение <i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="top" title="Выбранное значение"></i></th>
-                  <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="danger">
-                  <th scope="row">Показатель для расчета нетбэка 1</th>
-                  <td><i class="ion-ios-information" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
-                  <td>$/барр.</td>
-                  <td>
-                    <div class="inline-elements">
-                      <label class="custom-control custom-radio" for="grid-input-7">
-                        <input type="radio" id="grid-input-7" name="grid-radios-2" class="custom-control-input" checked="">
-                        <span class="custom-control-indicator"></span>
-                      </label>
-                      <input type="text" value="35" placeholder="">
-                    </div>
-                  </td>
-                  <td>
-                    <label class="custom-control custom-radio radio-inline" for="grid-input-6">
-                      <input type="radio" id="grid-input-6" name="grid-radios-1" class="custom-control-input">
-                      <span class="custom-control-indicator"></span>
-                      43,0
-                    </label>
-                  </td>
-                  <td>?</td>
-                  <td></td>
-                  <td class="p-y-0"><i class="font-size-24 font-weight-bold ion-ios-information-outline" data-toggle="tooltip" data-placement="left" title="Справочная информация по показателям"></i></td>
-                </tr>
-                <tr>
-                  <th scope="row">Показатель для расчета нетбэка 2</th>
-                  <td><i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
-                  <td>$/барр.</td>
-                  <td>
-                    <div class="inline-elements">
-                      <label class="custom-control custom-radio" for="grid-input-8">
-                        <input type="radio" id="grid-input-8" name="grid-radios-2" class="custom-control-input">
-                        <span class="custom-control-indicator"></span>
-                      </label>
-                      <input type="text" value="39" placeholder="">
-                    </div>
-                  </td>
-                  <td>
-                    <label class="custom-control custom-radio radio-inline" for="grid-input-5">
-                      <input type="radio" id="grid-input-5" name="grid-radios-1" class="custom-control-input" checked="">
-                      <span class="custom-control-indicator"></span>
-                      41,5
-                    </label>
-                  </td>
-                  <td>1,2</td>
-                  <td></td>
-                  <td class="p-y-0"></td>
-                </tr>
-                <tr class="warning">
-                  <th scope="row">Транспортные затраты, в том числе:</th>
-                  <td><i class="ion-ios-information" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
-                  <td>$/т</td>
-                  <td>
-                    <div class="inline-elements">
-                      <label class="custom-control custom-radio" for="grid-input-9">
-                        <input type="radio" id="grid-input-9" name="grid-radios-2" class="custom-control-input">
-                        <span class="custom-control-indicator"></span>
-                      </label>
-                      <input type="text" value="29,5" placeholder="">
-                    </div>
-                  </td>
-                  <td>
-                    <label class="custom-control custom-radio radio-inline" for="grid-input-4">
-                      <input type="radio" id="grid-input-4" name="grid-radios-1" class="custom-control-input">
-                      <span class="custom-control-indicator"></span>
-                      23,0
-                    </label>
-                  </td>
-                  <td>23,0</td>
-                  <td></td>
-                  <td class="p-y-0"><i class="font-size-24 font-weight-bold ion-ios-information-outline" data-toggle="tooltip" data-placement="left" title="Справочная информация по показателям"></i></td>
-                </tr>
-                <tr>
-                  <th scope="row" class="p-l-3">- фрахт</th>
-                  <td><i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
-                  <td>$/т</td>
-                  <td></td>
-                  <td>10</td>
-                  <td></td>
-                  <td></td>
-                  <td class="p-y-0"></td>
-                </tr>
-                <tr>
-                  <th scope="row" class="p-l-3">- перевалка</th>
-                  <td><i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
-                  <td>$/т</td>
-                  <td></td>
-                  <td>8</td>
-                  <td></td>
-                  <td></td>
-                  <td class="p-y-0"></td>
-                </tr>
-                <tr>
-                  <th scope="row" class="p-l-3">- транспортировка</th>
-                  <td><i class="ion-ios-information text-light" data-toggle="tooltip" data-placement="right" title="Справочная информация по показателям"></i></td>
-                  <td>$/т</td>
-                  <td></td>
-                  <td>5,3</td>
-                  <td></td>
-                  <td></td>
-                  <td class="p-y-0"></td>
-                </tr>
-                <tr class="danger">
-                  <th class="b-t-2" scope="row">Итог расчёта:</th>
-                  <td class="b-t-2"></td>
-                  <td class="b-t-2">руб./т</td>
-                  <td class="b-t-2">
-                    <div><b>Расчет</b> 60,0</div>
-                    <div><b>ПТД</b> <input type="text" value="61" placeholder=""></div>
-                  </td>
-                  <td class="b-t-2">107,5</td>
-                  <td class="b-t-2">56,7</td>
-                  <td class="b-t-2"><input type="text" value="61" placeholder=""></td>
-                  <td class="b-t-2"><i class="font-size-24 font-weight-bold ion-ios-information-outline" data-toggle="tooltip" data-placement="left" title="Справочная информация по показателям"></i></td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-            <button type="button" class="btn btn-custom">Сохранить</button>
-          </div>
-        </div>
+      <div class="col-lg-12 m-b-3">
+        <button type="button" class="btn btn-custom pull-xs-right"><i class="ion-plus m-r-1"></i>Добавить график</button>
       </div>
-
     </div>
 
     <div class="row">
