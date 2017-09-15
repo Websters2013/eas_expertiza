@@ -32,7 +32,7 @@ AmCharts.dayNames = [
     'Пятница',
     'Суббота',
     'Воскресенье'];
-AmCharts.dayNames = [
+AmCharts.shortDays = [
     'Пн',
     'Вт',
     'Ср',
@@ -1330,7 +1330,6 @@ chart.addListener("rendered", zoomChart);
 chart2.addListener("rendered", zoomChart);
 
 zoomChart();
-
 function zoomChart() {
     chart.zoomToIndexes(chart.dataProvider.length - 40, chart.dataProvider.length - 1);
     chart2.zoomToIndexes(chart2.dataProvider.length - 40, chart2.dataProvider.length - 1);

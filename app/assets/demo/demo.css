@@ -419,6 +419,38 @@ a.px-demo-brand:hover {
   margin: 0 2px 0 -7px;
   color: #007dc5;
 }
+.vertical-justify {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.dropdown_changable {
+  float: none !important;
+}
+.dropdown_changable.active a {
+  float: none !important;
+}
+.dropdown_changable.active > a {
+  color: inherit !important;
+  background-color: rgba(0,0,0,.05) !important;
+}
+.dropdown_changable > a.dropdown-toggle {
+  border: none !important;
+}
+.dropdown_changable > a.dropdown-toggle:after {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0,-50%);
+}
+.dropdown_changable .dropdown-menu {
+  width: 100%;
+  padding: 0;
+}
+.dropdown_changable .dropdown-menu li.active a {
+  background-color: #ccc !important;
+}
 .indicators {
 
 }
@@ -488,6 +520,16 @@ a.px-demo-brand:hover {
   display: flex;
   align-items: center;
   margin-left: 24px;
+}
+.justify-align .nav-tabs {
+  position: relative;
+  right: auto;
+  bottom: auto;
+}
+.indicators .nav-tabs {
+  position: relative;
+  right: auto;
+  bottom: auto;
 }
 .inline-elements {
   display: flex;
