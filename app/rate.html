@@ -1631,7 +1631,7 @@
     <div class="row">
       <div class="col-lg-3">
 
-        <div class="panel">
+        <div class="panel scroll-fixed">
           <div class="panel-heading bg-white darker">
             <span class="panel-title font-weight-bold">Ручной ввод</span>
           </div>
@@ -2062,6 +2062,70 @@
 
                       items.removeClass('active');
                       changeDropdownText(elem);
+                  }
+              });
+          }
+          if ( $('.scroll-fixed').length ) {
+
+              var elemsTop = [],
+                  elemsLeft = [],
+                  elemsWidth = [];
+
+             var checkData = function () {
+                 $.each($('.scroll-fixed'), function () {
+                     var curElem = $(this),
+                         elemTop = curElem.offset().top,
+                         elemLeft = curElem.offset().left,
+                         elemWidth = curElem.outerWidth();
+
+                     elemsTop.push(elemTop);
+                     elemsLeft.push(elemLeft);
+                     elemsWidth.push(elemWidth);
+                 });
+             };
+
+              var checkPosition = function (scrollTop) {
+
+                  $.each($('.scroll-fixed'), function (i) {
+                      var curElem = $(this);
+
+                      if (scrollTop > elemsTop[i]) {
+                          curElem.addClass('fixed');
+                          curElem.css({
+                              'position': 'fixed',
+                              'top': 0,
+                              'left': elemsLeft[i] + 'px',
+                              'width': elemsWidth[i] + 'px'
+                          });
+                      } else {
+                          curElem.addClass('fixed');
+                          curElem.attr('style', '');
+                      }
+                  });
+              };
+
+              checkData();
+              checkPosition($(window).scrollTop());
+              
+              $(window).on({
+                  'scroll': function () {
+                      var elem = $(this);
+
+                      if (elem.width() > 991) {
+                          checkData();
+                          checkPosition(elem.scrollTop());
+                      } else {
+                          checkPosition(0);
+                      }
+                  },
+                  'resize': function () {
+                      var elem = $(this);
+
+                      if (elem.width() > 991) {
+                          checkData();
+                      } else {
+                          checkPosition(0);
+                      }
                   }
               });
           }
